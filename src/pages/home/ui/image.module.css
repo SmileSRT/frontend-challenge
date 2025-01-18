@@ -5,11 +5,36 @@
   flex-wrap: wrap;
 }
 
+.tile__container {
+  height: auto;
+  width: auto;
+  position: relative;
+}
+
 .image__tile {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.image__tile:hover {
+.tile__container:hover .image__tile {
   transform: scale(1.14);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.heart__button {
+  position: absolute;
+  border: none;
+  background: none;
+  outline: none;
+  right: 5px;
+  bottom: 15px;
+  cursor: pointer;
+  display: none;
+}
+
+.heart__button.active {
+  display: block;
+}
+
+.tile__container:hover .heart__button {
+  display: block;
 }
