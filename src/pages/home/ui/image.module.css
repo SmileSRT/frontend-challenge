@@ -1,0 +1,15 @@
+.list__container {
+  list-style-type: none;
+  display: flex;
+  gap: 46px;
+  flex-wrap: wrap;
+}
+
+.image__tile {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image__tile:hover {
+  transform: scale(1.14);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}

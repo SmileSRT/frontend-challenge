@@ -27,7 +27,6 @@ const NavItem: FC<INavItem> = ({ title, href }) => {
   return (
     <Link
       to={href}
-      key={href}
       className={pathname === href ? activeStyle : styles.nav__item}
     >
       {title}
