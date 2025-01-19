@@ -1,9 +1,9 @@
 .list__container {
   list-style-type: none;
-  display: flex;
-  gap: 46px;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(6, 225px);
   justify-content: center;
+  gap: 46px;
 }
 
 .tile__container {
@@ -24,11 +24,70 @@
 
 .tile__container:hover .image__tile {
   transform: scale(1.14);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 9px 18px rgba(0, 0, 0, 0.18);
 }
 
 .tile__container:hover {
   button {
     display: block;
+  }
+}
+
+@media screen and (max-width: 1600px) {
+  .list__container {
+    grid-template-columns: repeat(5, 225px);
+  }
+}
+
+@media screen and (max-width: 1360px) {
+  .list__container {
+    grid-template-columns: repeat(4, 225px);
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .list__container {
+    grid-template-columns: repeat(3, 200px);
+    gap: 30px;
+  }
+
+  .image__tile {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .list__container {
+    grid-template-columns: repeat(3, 150px);
+    gap: 15px;
+  }
+
+  .tile__container {
+    button {
+      display: block;
+    }
+  }
+
+  .image__tile {
+    width: 150px;
+    height: 150px;
+  }
+
+  .tile__container:hover .image__tile {
+    transform: none;
+    box-shadow: none;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .list__container {
+    grid-template-columns: repeat(2, 130px);
+    gap: 10px;
+  }
+
+  .image__tile {
+    width: 130px;
+    height: 130px;
   }
 }

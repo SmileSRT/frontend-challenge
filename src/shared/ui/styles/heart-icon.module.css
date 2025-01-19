@@ -24,3 +24,17 @@
     fill: #ff3a00;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .outlined__heart,
+  .filled__heart {
+    width: 30px;
+    height: 30px;
+  }
+
+  .heart__icon {
+    pointer-events: none;
+    width: 30px;
+    height: 30px;
+  }
+}
