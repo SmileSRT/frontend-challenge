@@ -1,22 +1,17 @@
-import { useEffect, useState, type FC } from "react";
-import { CatsService, ICatItem } from "./api/cats.service";
+import { useEffect, type FC } from "react";
 import CatImageList from "./ui/cat-image-list";
+import useCatsStore from "../../app/cats-store";
 
 const HomePage: FC = () => {
-  const [catItems, setCatItems] = useState<ICatItem[]>([]);
-
-  const fetchListItems = async () => {
-    const data = await CatsService.fetchList();
-
-    if (data) {
-      setCatItems(data);
-    }
-  };
+  const { cats, fetchCats } = useCatsStore();
 
   useEffect(() => {
-    fetchListItems();
-  }, []);
-  return <CatImageList items={catItems} />;
+    if (!cats.length) {
+      fetchCats();
+    }
+  }, [fetchCats, cats]);
+
+  return <CatImageList items={cats} />;
 };
 
 export default HomePage;

@@ -3,6 +3,7 @@
   display: flex;
   gap: 46px;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .tile__container {
