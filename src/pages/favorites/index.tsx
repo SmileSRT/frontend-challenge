@@ -1,6 +1,6 @@
 import type { FC } from "react";
-import useCatsStore from "../../app/cats-store";
-import CatImageList from "../home/ui/cat-image-list";
+import CatImageList from "../../entites/cats/ui/cat-image-list";
+import useCatsStore from "../../entites/cats/model/cats-store";
 
 const FavoritesPage: FC = () => {
   const favoriteCats = useCatsStore((state) => state.favoriteCats);

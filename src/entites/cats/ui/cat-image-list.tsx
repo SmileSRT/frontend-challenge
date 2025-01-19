@@ -1,31 +1,8 @@
 import type { FC } from "react";
-import type { ICatItem } from "../api/cats.service";
-import styles from "./image.module.css";
-import HeartIcon from "./heart-button";
-import useCatsStore from "../../../app/cats-store";
-
-const LikeButton: FC<{
-  like: () => void;
-  dislike: () => void;
-  isLiked: boolean;
-}> = ({ like, dislike, isLiked }) => {
-  const activeStyle = [styles.heart__button, styles.active].join(" ");
-
-  const likeHandler = () => {
-    const handler = isLiked ? dislike : like;
-
-    handler();
-  };
-
-  return (
-    <button
-      className={isLiked ? activeStyle : styles.heart__button}
-      onClick={() => likeHandler()}
-    >
-      <HeartIcon isLiked={isLiked} />
-    </button>
-  );
-};
+import styles from "./cat-list.module.css";
+import LikeButton from "../../../shared/ui/like-button";
+import useCatsStore from "../model/cats-store";
+import type { ICatItem } from "../model/types";
 
 const CatImageTile: FC<{ item: ICatItem }> = ({ item }) => {
   const { like, dislike, favoriteCats } = useCatsStore();

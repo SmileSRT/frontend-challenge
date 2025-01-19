@@ -1,5 +1,5 @@
 import { type FC } from "react";
-import styles from "./heart.module.css";
+import styles from "./styles/heart-icon.module.css";
 
 const OutlinedHeart: FC = () => {
   return (

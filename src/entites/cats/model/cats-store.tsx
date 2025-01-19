@@ -1,13 +1,6 @@
 import { create } from "zustand";
-import { CatsService, ICatItem } from "../pages/home/api/cats.service";
-
-interface ICatsStore {
-  cats: ICatItem[];
-  favoriteCats: ICatItem[];
-  fetchCats: () => void;
-  like: (item: ICatItem) => void;
-  dislike: (id: string) => void;
-}
+import type { ICatsStore } from "./types";
+import { CatsService } from "../api/cats.service";
 
 const useCatsStore = create<ICatsStore>((set) => ({
   cats: [],

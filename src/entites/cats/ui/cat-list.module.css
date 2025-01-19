@@ -10,6 +10,12 @@
   height: auto;
   width: auto;
   position: relative;
+
+  button {
+    right: 5px;
+    bottom: 15px;
+    display: none;
+  }
 }
 
 .image__tile {
@@ -21,21 +27,8 @@
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
 }
 
-.heart__button {
-  position: absolute;
-  border: none;
-  background: none;
-  outline: none;
-  right: 5px;
-  bottom: 15px;
-  cursor: pointer;
-  display: none;
-}
-
-.heart__button.active {
-  display: block;
-}
-
-.tile__container:hover .heart__button {
-  display: block;
+.tile__container:hover {
+  button {
+    display: block;
+  }
 }
