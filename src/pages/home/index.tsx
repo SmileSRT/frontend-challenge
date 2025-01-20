@@ -1,6 +1,6 @@
 import { useEffect, type FC } from "react";
-import CatImageList from "../../entites/cats/ui/cat-image-list";
-import useCatsStore from "../../entites/cats/model/cats-store";
+import CatImageList from "../../entities/cats/ui/cat-image-list";
+import useCatsStore from "../../entities/cats/model/cats-store";
 
 const HomePage: FC = () => {
   const { cats, fetchCats } = useCatsStore();

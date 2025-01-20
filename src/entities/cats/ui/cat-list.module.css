@@ -59,7 +59,7 @@
 
 @media screen and (max-width: 768px) {
   .list__container {
-    grid-template-columns: repeat(3, 150px);
+    grid-template-columns: repeat(3, auto);
     gap: 15px;
   }
 
@@ -70,8 +70,9 @@
   }
 
   .image__tile {
-    width: 150px;
-    height: 150px;
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
   }
 
   .tile__container:hover .image__tile {
@@ -82,12 +83,7 @@
 
 @media screen and (max-width: 500px) {
   .list__container {
-    grid-template-columns: repeat(2, 130px);
+    grid-template-columns: repeat(2, auto);
     gap: 10px;
-  }
-
-  .image__tile {
-    width: 130px;
-    height: 130px;
   }
 }
