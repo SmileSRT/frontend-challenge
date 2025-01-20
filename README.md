@@ -1,3 +1,17 @@
+# Выполненное задание
+
+## Используемый стек
+
+- React
+- TS
+- Zustand
+- css.modules
+- VITE
+
+## GitHub pages:
+
+https://smilesrt.github.io/frontend-challenge/
+
 # Задание для Front-end стажёра
 
 Привет! Если ты хочешь стать частью команды Учи.ру в рамках стажёрской программы,
